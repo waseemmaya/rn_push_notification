@@ -29,12 +29,6 @@ build/
 local.properties
 *.iml
 
-google-services.json
-
-# google-services.json
-
-android/app/google-services.json
-
 # node.js
 #
 node_modules/
@@ -46,7 +40,6 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
-google-services.json
 
 # fastlane
 #
@@ -64,3 +57,5 @@ google-services.json
 
 # CocoaPods
 /ios/Pods/
+
+android/app/google-services.json
