@@ -20,20 +20,20 @@ export default class App extends Component {
   }
   async componentDidMount() {
     try {
+      this.bg_listener = listen_in_background();
+      this.fg_listener = listen_in_foreground();
+      this.popup_notification = open_notification_popup();
       create_notification_channel();
       await check_permission();
       await get_fcm_token();
       await get_device_uid();
-      this.bg_listener = listen_in_background();
-      this.fg_listener = listen_in_foreground();
-      this.popup_notification = open_notification_popup();
     } catch (error) {
       console.log('error: ', error);
     }
   }
 
   componentWillUnmount() {
-    this.fg_listener();
+    if (this.fg_listener) this.fg_listener();
   }
 }
 
