@@ -29,6 +29,8 @@ build/
 local.properties
 *.iml
 
+google-services.json
+
 # google-services.json
 
 android/app/google-services.json
@@ -44,7 +46,7 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
-!google-services.json
+google-services.json
 
 # fastlane
 #
